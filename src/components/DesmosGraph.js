@@ -19,10 +19,13 @@ const DesmosGraph = () => {
     calculator.setExpression({ id: "graph10", latex: "(x-2)^2 + (y+2)^2=4" });
   }, []);
 
-  return;
-  <BrowserOnly>
-    <div id="graph"></div>;
-  </BrowserOnly>;
+  return (
+    <BrowserOnly fallback={null}>
+      {() => {
+        <div id="graph"></div>;
+      }}
+    </BrowserOnly>
+  );
 };
 
 export default DesmosGraph;
