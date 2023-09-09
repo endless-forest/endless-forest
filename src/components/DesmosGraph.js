@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Desmos from "desmos";
+import BrowserOnly from "@docusaurus/BrowserOnly";
 
 const DesmosGraph = () => {
   useEffect(() => {
@@ -18,7 +19,10 @@ const DesmosGraph = () => {
     calculator.setExpression({ id: "graph10", latex: "(x-2)^2 + (y+2)^2=4" });
   }, []);
 
-  return <div id="graph"></div>;
+  return;
+  <BrowserOnly>
+    <div id="graph"></div>;
+  </BrowserOnly>;
 };
 
 export default DesmosGraph;
