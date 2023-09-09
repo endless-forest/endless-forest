@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
-// import Desmos from 'desmos';
-import BrowserOnly from "@docusaurus/BrowserOnly";
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+
+if (ExecutionEnvironment.canUseDOM) {
+  const Desmos = require('desmos');
+}
 
 const DesmosGraph = () => {
   useEffect(() => {
-    if (document.getElementById("graph")) {
+    if (window) {
       const elt = document.getElementById("graph");
       elt.style.width = "1200px";
       elt.style.height = "800px";
@@ -21,14 +24,7 @@ const DesmosGraph = () => {
     }
   }, []);
 
-  return (
-    <BrowserOnly>
-      {() => {
-        const Desmos = require('desmos') 
-        return <div id="graph"></div>;
-      }}
-    </BrowserOnly>
-  );
+  return <div id="graph"></div>;
 };
 
 export default DesmosGraph;
