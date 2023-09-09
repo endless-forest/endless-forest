@@ -14,7 +14,7 @@ function HomepageHeader() {
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-           Forthcoming
+           Testing Desmos Node Package Integration
         </div>
       </div>
     </header>
@@ -29,7 +29,7 @@ export default function Home() {
       description="math stuff">
       <HomepageHeader />
       <main>
-        <center>Some Content Will Go Here</center>
+        
       </main>
     </Layout>
   );
