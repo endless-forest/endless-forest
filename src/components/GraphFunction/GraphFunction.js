@@ -17,7 +17,6 @@ const GraphFunction = () => {
     ctx.stroke();
   });
 
- 
 
   return (
     <div>
