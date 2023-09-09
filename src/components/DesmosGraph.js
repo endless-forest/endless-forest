@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
-import Desmos from "desmos";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
+
+if (ExecutionEnvironment.canUseDOM) {
+  const Desmos = require("desmos");
+}
 
 const DesmosGraph = () => {
   useEffect(() => {
