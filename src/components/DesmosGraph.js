@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Desmos from 'desmos';
+// import Desmos from 'desmos';
 import BrowserOnly from "@docusaurus/BrowserOnly";
 
 const DesmosGraph = () => {
@@ -24,6 +24,7 @@ const DesmosGraph = () => {
   return (
     <BrowserOnly>
       {() => {
+        const Desmos = require('desmos') 
         return <div id="graph"></div>;
       }}
     </BrowserOnly>
