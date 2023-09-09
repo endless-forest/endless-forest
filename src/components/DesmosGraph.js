@@ -2,12 +2,11 @@ import React, { useEffect } from "react";
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 if (ExecutionEnvironment.canUseDOM) {
-  const Desmos = require('desmos');
+  var Desmos = require('desmos');
 }
 
 const DesmosGraph = () => {
   useEffect(() => {
-    if (window) {
       const elt = document.getElementById("graph");
       elt.style.width = "1200px";
       elt.style.height = "800px";
@@ -21,7 +20,6 @@ const DesmosGraph = () => {
       calculator.setExpression({ id: "graph7", latex: "x=2" });
       calculator.setExpression({ id: "graph9", latex: "x^2 + y^2=4" });
       calculator.setExpression({ id: "graph10", latex: "(x-2)^2 + (y+2)^2=4" });
-    }
   }, []);
 
   return <div id="graph"></div>;
