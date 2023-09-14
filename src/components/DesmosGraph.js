@@ -31,6 +31,7 @@ const DesmosGraph = ({ expressions }) => {
       elt.style.height = "800px";
       const calculator = Desmos.GraphingCalculator(elt);
       graphExpressions(calculator, expressions);
+      console.info(calculator.getState())
     }
   }, []);
 
