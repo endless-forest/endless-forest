@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Button } from "semantic-ui-react";
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 
 const getRandomInt = (min, max) => {
@@ -19,7 +20,7 @@ const generateCircles = (circleCount) => {
   let radius;
   let center;
   let circle;
-  for (let count = 0; count < circleCount; count++) {  
+  for (let count = 0; count < circleCount; count++) {
     radius = getRandomInt(1, 4);
     center = { h: getRandomInt(-6, 6), k: getRandomInt(-6, 6) };
     circle = generateCircle(radius, center);
@@ -42,31 +43,47 @@ const createCalculator = () => {
   const elt = document.getElementById("graph");
   elt.style.width = "1200px";
   elt.style.height = "800px";
-  const calculator = Desmos.GraphingCalculator(elt, {expressions: false});
+  elt.style.margin = "25px";
+  const calculator = Desmos.GraphingCalculator(elt, { expressions: false });
   return calculator;
 };
 
 const updateCircleKingdom = (calculator) => {
-    calculator.setBlank()
-    const expressions = generateCircles(10);
-    graphExpressions(calculator, expressions); 
-}
+  calculator.setBlank();
+  const expressions = generateCircles(10);
+  graphExpressions(calculator, expressions);
+};
 
-const CircleKingdom = () => { 
-  const [calculator, setCalculator] = useState(null)
+const onStartClick = (calculator, setCircleTimer) => {
+  setCircleTimer(setInterval(() => updateCircleKingdom(calculator), 500))
+};
+
+const CircleKingdom = () => {
+  const [calculator, setCalculator] = useState(null);
+  const [circleTimer, setCircleTimer] = useState(null);
 
   useEffect(() => {
     if (window) {
       const expressions = generateCircles(10);
-      const newCalculator = createCalculator()
-      setCalculator(newCalculator) 
+      const newCalculator = createCalculator();
+      setCalculator(newCalculator);
       graphExpressions(newCalculator, expressions);
     }
   }, []);
 
   return (
-    <div> 
-      <button onClick={() => updateCircleKingdom(calculator) }>Update The Circle Kingdom</button>  
+    <div>
+      <Button
+        basic
+        color="teal"
+        style={{ margin: "10px" }}
+        onClick={() => onStartClick(calculator, setCircleTimer)}
+      >
+        Start Circle Kingdom
+      </Button>
+      <Button basic color="violet" onClick={() => clearInterval(circleTimer)}>
+        Stop Circle Kingdom
+      </Button>
       <div id="graph"></div>
     </div>
   );
