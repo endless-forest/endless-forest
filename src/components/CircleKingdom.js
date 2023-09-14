@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "semantic-ui-react";
+import { Button} from "semantic-ui-react";
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 
 const getRandomInt = (min, max) => {
