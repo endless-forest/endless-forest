@@ -50,10 +50,24 @@ if (ExecutionEnvironment.canUseDOM) {
   var Desmos = require("desmos");
 }
 
+const getPointFromLatex = (latexString) => {
+  let point = latexString.split("),")[1].replace("(", "").replace(" ", "").split(",")
+  return `(${point[0]}, ${point[1]})`
+  
+}
+
 const graphExpressions = (calculator, expressions) => {
+
   expressions.forEach((expression) => {
     calculator.setExpression(expression);
   });
+  getPointFromLatex(expressions[0].latex)
+  calculator.setExpression({
+    id: `star-label`,
+    latex: getPointFromLatex(expressions[0].latex),
+    label: "I'm a star!",
+    showLabel: true
+  })
 };
 
 const createCalculator = () => {
