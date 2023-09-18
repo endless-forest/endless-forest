@@ -145,12 +145,12 @@ const RotatingShape = () => {
           />
         </Form.Field>
       </Form>
-      <Input style={{margin: "25px"}} onChange={onInputSelect}
+      <Input style={{margin: "25px", width: "60px"}} onChange={onInputSelect}
     action={{
       color: 'teal',
       labelPosition: 'left',
-      icon: 'cart',
-      content: 'Rotation Increment',
+      icon: 'sync alternate',
+      content: 'Rotation Increment (Degrees)',
     }}
     actionPosition='left'
     placeholder='Degrees'
