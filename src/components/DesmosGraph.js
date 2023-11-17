@@ -128,7 +128,7 @@ export const projectPartOneExpressions = [
   },
   { id: "graph15", latex: "y = \\sqrt{x + 8.2} + 1.6", color: "green" },
   { id: "graph16", latex: "y = x^4 + x^3 + x^2 + 4", color: "black" },
-  { id: "graph17", latex: "y = x^7 + x^3 -18", color: "orange" },
+  { id: "graph17", latex: "y = x^7 + x^3 - 18", color: "orange" },
   {
     id: "point15",
     latex: "(-6.5, 3.5)",
@@ -179,6 +179,15 @@ export const projectPartOneExpressions = [
     color: "black",
     showLabel: true,
     label: "`(x - h)^2 + (y - k)^2 = r^2`",
+    labelOrientation: "right",
+    labelSize: 1
+  },
+  {
+    id: "point23",
+    latex: "(-10.2, -1)",
+    color: "black",
+    showLabel: true,
+    label: "`y = a_{n}x^{n} + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + ... + a_{1}{x} + a_{0}`",
     labelOrientation: "right",
     labelSize: 1
   },
