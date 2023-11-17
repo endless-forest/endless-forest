@@ -184,7 +184,7 @@ export const projectPartOneExpressions = [
   },
   {
     id: "point23",
-    latex: "(-10.2, -1)",
+    latex: "(-10.2, -1f)",
     color: "black",
     showLabel: true,
     label: "`y = a_{n}x^{n} + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + ... + a_{1}{x} + a_{0}`",
