@@ -25,7 +25,7 @@ export const projectPartOneExpressions = [
     color: "purple",
     showLabel: true,
     label: "y = 2x+1",
-    labelOrientation: "top"
+    labelOrientation: "top",
   },
   { id: "graph4", latex: "y=3" },
   {
@@ -34,7 +34,7 @@ export const projectPartOneExpressions = [
     color: "black",
     showLabel: true,
     label: "y = 3",
-    labelOrientation: "top"
+    labelOrientation: "top",
   },
   { id: "graph5", latex: "y=2" },
   {
@@ -43,7 +43,7 @@ export const projectPartOneExpressions = [
     color: "red",
     showLabel: true,
     label: "y = 2",
-    labelOrientation: "top"
+    labelOrientation: "top",
   },
   { id: "graph6", latex: "x=3" },
   {
@@ -52,7 +52,7 @@ export const projectPartOneExpressions = [
     color: "teal",
     showLabel: true,
     label: "x = 3",
-    labelOrientation: "right"
+    labelOrientation: "right",
   },
   { id: "graph7", latex: "x=2" },
   {
@@ -61,7 +61,7 @@ export const projectPartOneExpressions = [
     color: "teal",
     showLabel: true,
     label: "x = 2",
-    labelOrientation: "right"
+    labelOrientation: "right",
   },
   { id: "graph8", latex: "x^2 + y^2=4", color: "red" },
   {
@@ -70,7 +70,7 @@ export const projectPartOneExpressions = [
     color: "red",
     showLabel: true,
     label: "`{x^2 + y^2=4}`",
-    labelOrientation: "right"
+    labelOrientation: "right",
   },
   { id: "graph9", latex: "(x-2)^2 + (y+2)^2=4", color: "black" },
   {
@@ -79,7 +79,7 @@ export const projectPartOneExpressions = [
     color: "black",
     showLabel: true,
     label: "`(x-2)^2 + (y+2)^2=4`",
-    labelOrientation: "right"
+    labelOrientation: "right",
   },
   { id: "graph10", latex: "y=10(x-5)^2 + 3", color: "orange" },
   {
@@ -88,16 +88,24 @@ export const projectPartOneExpressions = [
     color: "orange",
     showLabel: true,
     label: "`y=10(x-5)^2 + 3`",
-    labelOrientation: "left"
+    labelOrientation: "left",
   },
-  { id: "graph11", latex: "y=-5(x-6.25)^2 + 6", color: "red" },
+  {
+    id: "graph11",
+    latex: "y=-5(x-6.25)^{2}+6\\left\\{-.2<y<6\\right\\}",
+    color: "red",
+  },
+  // TO-DO
+  {id: "graph12",
+   latex: "y\\ =\\ln\\left(x-1\\right)-5\\left\\{4<x<6\\right\\}\\left\\{-5<y<5\\right\\}",
+   color: "teal"},
   {
     id: "point11",
     latex: "(7.1, 2.5)",
     color: "red",
     showLabel: true,
     label: "`y=-5(x-6.25)^2 + 6`",
-    labelOrientation: "right"
+    labelOrientation: "right",
   },
   { id: "graph12", latex: "y=10(x-7.5)^2 + 3", color: "green" },
   {
@@ -106,7 +114,7 @@ export const projectPartOneExpressions = [
     color: "green",
     showLabel: true,
     label: "`y=10(x-7.5)^2 + 3`",
-    labelOrientation: "left"
+    labelOrientation: "left",
   },
   { id: "graph13", latex: "y = \\sqrt{x + 8} + 2.3", color: "purple" },
   {
@@ -115,7 +123,7 @@ export const projectPartOneExpressions = [
     color: "green",
     showLabel: true,
     label: "`y = \\sqrt{x + 8} + 2.3`",
-    labelOrientation: "right"
+    labelOrientation: "right",
   },
   { id: "graph14", latex: "y = -\\sqrt{x + 8} + 1.6", color: "red" },
   {
@@ -124,20 +132,28 @@ export const projectPartOneExpressions = [
     color: "red",
     showLabel: true,
     label: "`y = -\\sqrt{x + 8} + 1.6`",
-    labelOrientation: "right"
+    labelOrientation: "right",
   },
   { id: "graph15", latex: "y = \\sqrt{x + 8.2} + 1.6", color: "green" },
   { id: "graph16", latex: "y = x^4 + x^3 + x^2 + 4", color: "black" },
   { id: "graph17", latex: "y = x^7 + x^3 - 18", color: "orange" },
-  { id: "graph18", latex: "y=(x+9)^{2}/2x - 1\\left\\{-9.5\\ <x<-8.5\\ \\right\\}", color: "teal" },
-  { id: "graph19", latex: "y=-(x+9)^{2}/2x - 2\\left\\{-9.5\\ <x<-8.5\\ \\right\\}", color: "teal" },
+  {
+    id: "graph18",
+    latex: "y=(x+9)^{2}/2x - 1\\left\\{-9.5\\ <x<-8.5\\ \\right\\}",
+    color: "teal",
+  },
+  {
+    id: "graph19",
+    latex: "y=-(x+9)^{2}/2x - 2\\left\\{-9.5\\ <x<-8.5\\ \\right\\}",
+    color: "teal",
+  },
   {
     id: "point15",
     latex: "(-6.5, 3.5)",
     color: "purple",
     showLabel: true,
     label: "`y = \\sqrt{x + 8.2} + 1.6`",
-    labelOrientation: "right"
+    labelOrientation: "right",
   },
   {
     id: "point16",
@@ -146,7 +162,7 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "FUNCTIONS GRAPHED",
     labelOrientation: "right",
-    labelSize: 2
+    labelSize: 2,
   },
   {
     id: "point17",
@@ -155,7 +171,7 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = ax + k`",
     labelOrientation: "right",
-    labelSize: 1
+    labelSize: 1,
   },
   {
     id: "point18",
@@ -164,7 +180,7 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = a(x - h)^2 + k`",
     labelOrientation: "right",
-    labelSize: 1
+    labelSize: 1,
   },
   {
     id: "point19",
@@ -173,7 +189,7 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = a\\sqrt{x - h} + k`",
     labelOrientation: "right",
-    labelSize: 1
+    labelSize: 1,
   },
   {
     id: "point20",
@@ -182,7 +198,7 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`(x - h)^2 + (y - k)^2 = r^2`",
     labelOrientation: "right",
-    labelSize: 1
+    labelSize: 1,
   },
   {
     id: "point21",
@@ -191,7 +207,7 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = x^4 + x^3 + x^2 + 4`",
     labelOrientation: "left",
-    labelSize: 1
+    labelSize: 1,
   },
   {
     id: "point22",
@@ -200,35 +216,54 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = x^4 + x^3 + x^2 + 4`",
     labelOrientation: "left",
-    labelSize: 1
+    labelSize: 1,
   },
   {
     id: "point23",
-    latex: "(-10.2, -1f)",
+    latex: "(-10.2, -3)",
     color: "black",
     showLabel: true,
-    label: "`y = a_{n}x^{n} + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + ... + a_{1}{x} + a_{0}`",
+    label:
+      "`y = a_{n}x^{n} + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + ... + a_{1}{x} + a_{0}`",
     labelOrientation: "right",
-    labelSize: 1
+    labelSize: 1,
   },
   {
     id: "point24",
     latex: "(-9, -.8)",
     color: "teal",
     showLabel: true,
-    label: "`y=(x+7)^{2}/2x - 1\\left\\{-9.5\\ <x<-8.5\\ \\right\\}`",
+    label: "`y=(x+7)^{2}/2x - 1`",
     labelOrientation: "right",
-    labelSize: 1
+    labelSize: 1,
   },
   {
     id: "point25",
     latex: "(-9, -2.2)",
     color: "teal",
     showLabel: true,
-    label: "`y=-(x+7)^{2}/2x - 1\\left\\{-9.5\\ <x<-8.5\\ \\right\\}`",
+    label: "`y=-(x+7)^{2}/2x - 1`",
     labelOrientation: "right",
-    labelSize: 1
-  }
+    labelSize: 1,
+  },
+  {
+    id: "point26",
+    latex: "(-10.2, -3.5)",
+    color: "black",
+    showLabel: true,
+    label: "`y = log_{b}x`",
+    labelOrientation: "right",
+    labelSize: 1,
+  },
+  {
+    id: "point27",
+    latex: "(-10.2, -4)",
+    color: "black",
+    showLabel: true,
+    label: "`y = b^x`",
+    labelOrientation: "right",
+    labelSize: 1,
+  },
 ];
 
 if (ExecutionEnvironment.canUseDOM) {
