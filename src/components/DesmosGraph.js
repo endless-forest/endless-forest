@@ -127,6 +127,10 @@ export const projectPartOneExpressions = [
     labelOrientation: "right"
   },
   { id: "graph15", latex: "y = \\sqrt{x + 8.2} + 1.6", color: "green" },
+  { id: "graph16", latex: "y = x^4 + x^3 + x^2 + 4", color: "black" },
+  { id: "graph17", latex: "y = x^7 + x^3 - 18", color: "orange" },
+  { id: "graph18", latex: "y=(x+9)^{2}/2x - 1\\left\\{-9.5\\ <x<-8.5\\ \\right\\}", color: "teal" },
+  { id: "graph19", latex: "y=-(x+9)^{2}/2x - 2\\left\\{-9.5\\ <x<-8.5\\ \\right\\}", color: "teal" },
   {
     id: "point15",
     latex: "(-6.5, 3.5)",
@@ -180,6 +184,51 @@ export const projectPartOneExpressions = [
     labelOrientation: "right",
     labelSize: 1
   },
+  {
+    id: "point21",
+    latex: "(-1.3, 6)",
+    color: "black",
+    showLabel: true,
+    label: "`y = x^4 + x^3 + x^2 + 4`",
+    labelOrientation: "left",
+    labelSize: 1
+  },
+  {
+    id: "point22",
+    latex: "(1.4, -4.5)",
+    color: "orange",
+    showLabel: true,
+    label: "`y = x^4 + x^3 + x^2 + 4`",
+    labelOrientation: "left",
+    labelSize: 1
+  },
+  {
+    id: "point23",
+    latex: "(-10.2, -1f)",
+    color: "black",
+    showLabel: true,
+    label: "`y = a_{n}x^{n} + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + ... + a_{1}{x} + a_{0}`",
+    labelOrientation: "right",
+    labelSize: 1
+  },
+  {
+    id: "point24",
+    latex: "(-9, -.8)",
+    color: "teal",
+    showLabel: true,
+    label: "`y=(x+7)^{2}/2x - 1\\left\\{-9.5\\ <x<-8.5\\ \\right\\}`",
+    labelOrientation: "right",
+    labelSize: 1
+  },
+  {
+    id: "point25",
+    latex: "(-9, -2.2)",
+    color: "teal",
+    showLabel: true,
+    label: "`y=-(x+7)^{2}/2x - 1\\left\\{-9.5\\ <x<-8.5\\ \\right\\}`",
+    labelOrientation: "right",
+    labelSize: 1
+  }
 ];
 
 if (ExecutionEnvironment.canUseDOM) {
