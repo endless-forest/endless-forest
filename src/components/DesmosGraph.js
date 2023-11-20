@@ -121,7 +121,7 @@ export const projectPartOneExpressions = [
     latex: "(4.3, -3.75)",
     color: "green",
     showLabel: true,
-    label: "`y=2^{-\\left(x-4\\right)}-5`",
+    label: "`y=2^{\\left(x-4\\right)}-5`",
     labelOrientation: "right",
   },
   {
