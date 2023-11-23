@@ -9,7 +9,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Endless Forest',
   tagline: 'Math Content',
-  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://endless-forest.github.io',
@@ -68,10 +67,6 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Home',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
         items: [
           {
             type: 'docSidebar',
@@ -86,6 +81,11 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      }
     }),
 };
 
