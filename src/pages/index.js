@@ -10,11 +10,9 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero hero--primary', styles.heroBanner)} style={{backgroundColor: "teal"}}>
       <div className="container">
-        <div className={styles.buttons}> 
           <img src={homePageTable} />;
-        </div>
       </div>
     </header>
   );
