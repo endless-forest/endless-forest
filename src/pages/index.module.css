@@ -16,6 +16,10 @@
   }
 }
 
+.aquaBackground {
+  background-color: aquamarine!;
+}
+
 .buttons {
   display: flex;
   align-items: center;
