@@ -12,7 +12,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)} style={{backgroundColor: "teal"}}>
       <div className="container">
-          <img src={homePageTable} />;
+          <img src={homePageTable} />
       </div>
     </header>
   );
@@ -26,7 +26,6 @@ export default function Home() {
       description="math stuff">
       <HomepageHeader />
       <main>
-        
       </main>
     </Layout>
   );
