@@ -103,19 +103,29 @@ export const projectPartOneExpressions = [
     label: "`y=ln(x-5)-2`",
     labelOrientation: "right",
   },
-  {id: "graph20",
-   latex: "y=\\ln\\left(x-5\\right)-2\\left\\{6<x<8\\right\\}",
-   color: "red"},
+  {
+    id: "graph20",
+    latex: "y=\\ln\\left(x-5\\right)-2\\left\\{6<x<8\\right\\}",
+    color: "red",
+  },
 
-   {id: "graph21",
-   latex: "y=-\\ln\\left(x-5\\right)-2\\left\\{6<x<8\\right\\}",
-   color: "green"},
-   {id: "graph60",
-   latex: "y=2^{\\left(x-4\\right)}-5\\left\\{4<x<6.5\\right\\}\\left\\{-5<y<-2\\right\\}",
-   color: "green"},
-   {id: "graph61",
-   latex: "y=2^{-\\left(x-4\\right)}-5\\left\\{4<x<6.5\\right\\}\\left\\{-5<y<-2\\right\\}",
-   color: "red"},
+  {
+    id: "graph21",
+    latex: "y=-\\ln\\left(x-5\\right)-2\\left\\{6<x<8\\right\\}",
+    color: "green",
+  },
+  {
+    id: "graph60",
+    latex:
+      "y=2^{\\left(x-4\\right)}-5\\left\\{4<x<6.5\\right\\}\\left\\{-5<y<-2\\right\\}",
+    color: "green",
+  },
+  {
+    id: "graph61",
+    latex:
+      "y=2^{-\\left(x-4\\right)}-5\\left\\{4<x<6.5\\right\\}\\left\\{-5<y<-2\\right\\}",
+    color: "red",
+  },
   {
     id: "point51",
     latex: "(4.3, -3.75)",
@@ -314,6 +324,58 @@ export const projectPartOneExpressions = [
     labelOrientation: "right",
     labelSize: 1,
   },
+  // 2 ellipse
+  {
+    id: "ellipse1",
+    latex: "1=\\ 3\\left(x-9\\right)^{2}+\\left(y+5\\right)^{2}",
+    color: "teal",
+  },
+  {
+    id: "ellipse20",
+    latex: "1=\\ 3\\left(x-9\\right)^{2}+\\left(y+5.5\\right)^{2}",
+    color: "red",
+  },
+  // 2 sideways parabola
+  {
+    id: "parabola-sideways1",
+    latex: "x\\ =\\ \\left(y+6\\right)^{2}+4\\left\\{x<6\\right\\}",
+    color: "green",
+  },
+  {
+    id: "parabola-sideways2",
+    latex: "x\\ =\\ -\\left(y+6\\right)^{2}+4\\left\\{x>2\\right\\}",
+    color: "red",
+  },
+  // 2 hyperbola
+  {
+    id: "hyperbola1",
+    latex: "1\\ =\\ \\frac{1}{5}\\left(x+6\\right)^{2}-y^{2}\\left\\{-4<x<0\\right\\}",
+    color: "red",
+  },
+  {
+    id: "hyperbola2",
+    latex: "1\\ =\\ y^{2}-\\frac{1}{5}\\left(x+6\\right)^{2}\\left\\{-4<x<0\\right\\}",
+    color: "green",
+  },
+  // graph-left: legend
+  {
+    id: "ellipse-legend",
+    latex: "(-10.2, .50)",
+    color: "black",
+    showLabel: true,
+    label: "`\\frac{\\left(x-h\\right)^{2}}{a^{2}}+\\frac{\\left(y-k\\right)^{2}}{b^{2}}=1`",
+    labelOrientation: "right",
+    labelSize: 1,
+  },
+  {
+    id: "hyperbola-legend",
+    latex: "(-10.2, -6)",
+    color: "black",
+    showLabel: true,
+    label: "`\\frac{\\left(x-h\\right)^{2}}{a^{2}}-\\frac{\\left(y-k\\right)^{2}}{b^{2}}=1`",
+    labelOrientation: "right",
+    labelSize: .3,
+  },
 ];
 
 if (ExecutionEnvironment.canUseDOM) {
@@ -336,7 +398,7 @@ const DesmosGraph = ({ expressions }) => {
       const calculator = Desmos.GraphingCalculator(elt, {
         expressions: false,
         settingsMenu: false,
-        zoomButtons: false
+        zoomButtons: false,
       });
       graphExpressions(calculator, expressions);
       console.info(calculator.getState());
