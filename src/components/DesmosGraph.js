@@ -24,8 +24,7 @@ export const projectPartOneExpressions = [
     latex: "(1, 3)",
     color: "purple",
     showLabel: true,
-    label: "y = 2x+1",
-    labelOrientation: "top",
+    label: "y = 2x+1"
   },
   { id: "graph4", latex: "y=3" },
   {
@@ -34,7 +33,6 @@ export const projectPartOneExpressions = [
     color: "black",
     showLabel: true,
     label: "y = 3",
-    labelOrientation: "top",
   },
   { id: "graph5", latex: "y=2" },
   {
@@ -43,7 +41,6 @@ export const projectPartOneExpressions = [
     color: "red",
     showLabel: true,
     label: "y = 2",
-    labelOrientation: "top",
   },
   { id: "graph6", latex: "x=3" },
   {
@@ -213,7 +210,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "FUNCTIONS GRAPHED",
     labelOrientation: "right",
-    labelSize: 2,
   },
   {
     id: "point17",
@@ -222,7 +218,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = ax + k`",
     labelOrientation: "right",
-    labelSize: 1,
   },
   {
     id: "point18",
@@ -231,7 +226,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = a(x - h)^2 + k`",
     labelOrientation: "right",
-    labelSize: 1,
   },
   {
     id: "point19",
@@ -240,7 +234,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = a\\sqrt{x - h} + k`",
     labelOrientation: "right",
-    labelSize: 1,
   },
   {
     id: "point20",
@@ -249,7 +242,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`(x - h)^2 + (y - k)^2 = r^2`",
     labelOrientation: "right",
-    labelSize: 1,
   },
   {
     id: "point21",
@@ -258,7 +250,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = x^4 + x^3 + x^2 + 4`",
     labelOrientation: "left",
-    labelSize: 1,
   },
   {
     id: "point22",
@@ -267,7 +258,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = x^4 + x^3 + x^2 + 4`",
     labelOrientation: "left",
-    labelSize: 1,
   },
   {
     id: "point23",
@@ -277,7 +267,6 @@ export const projectPartOneExpressions = [
     label:
       "`y = a_{n}x^{n} + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + ... + a_{1}{x} + a_{0}`",
     labelOrientation: "right",
-    labelSize: 1,
   },
   {
     id: "point24",
@@ -286,7 +275,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y=(x+7)^{2}/2x - 1`",
     labelOrientation: "right",
-    labelSize: 1,
   },
   {
     id: "point25",
@@ -295,7 +283,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y=-(x+7)^{2}/2x - 1`",
     labelOrientation: "right",
-    labelSize: 1,
   },
   {
     id: "point26",
@@ -304,7 +291,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = alog_{b}{(x-h)}+k`",
     labelOrientation: "right",
-    labelSize: 1,
   },
   {
     id: "point27",
@@ -313,7 +299,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = ab^{(x-h)}+k`",
     labelOrientation: "right",
-    labelSize: 1,
   },
   {
     id: "point28",
@@ -322,7 +307,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`y = \\frac{P(x)}{Q(x)}`",
     labelOrientation: "right",
-    labelSize: 1,
   },
   // 2 ellipse
   {
@@ -365,7 +349,6 @@ export const projectPartOneExpressions = [
     showLabel: true,
     label: "`\\frac{\\left(x-h\\right)^{2}}{a^{2}}+\\frac{\\left(y-k\\right)^{2}}{b^{2}}=1`",
     labelOrientation: "right",
-    labelSize: 1,
   },
   {
     id: "hyperbola-legend",
@@ -373,8 +356,7 @@ export const projectPartOneExpressions = [
     color: "black",
     showLabel: true,
     label: "`\\frac{\\left(x-h\\right)^{2}}{a^{2}}-\\frac{\\left(y-k\\right)^{2}}{b^{2}}=1`",
-    labelOrientation: "right",
-    labelSize: .3,
+    labelOrientation: "right"
   },
 ];
 
@@ -401,7 +383,6 @@ const DesmosGraph = ({ expressions }) => {
         zoomButtons: false,
       });
       graphExpressions(calculator, expressions);
-      console.info(calculator.getState());
     }
   }, []);
 
