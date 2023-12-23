@@ -20,7 +20,6 @@ const updatePolygonPoints = (points, direction, degrees = 10) => {
 };
 
 const generatePolygon = (points, color) => {
-  console.info("points", points);
   let starExpression = "\\polygon(";
   let point;
   for (let i = 0; i < points.length; i++) {
@@ -81,7 +80,6 @@ const RotatingShape = () => {
   const [color, setColor] = useState("#388c46");
 
   const rotatePolygon = () => {
-    console.info("rotationIncrement", rotationIncrement)
     if (window) {
       calculator.setBlank();
       const newPoints = updatePolygonPoints(points, rotationDirection, rotationIncrement);
