@@ -10,10 +10,10 @@ const MathSolver = () => {
   });
 
   const getAnswers = (query) => {
-    // api key, simple api
-    const apiKey = "WU5ELG-E63YVEXY3U";
+    // ADD API KEY
+    const apiKey = ""
 
-    const url = `http://api.wolframalpha.com/v1/simple?appid=${apiKey}&i=${query}`;
+    const url = `https://api.wolframalpha.com/v1/simple?appid=${apiKey}&i=${query}`;
 
     // Make a request for a user with a given ID
     axios
