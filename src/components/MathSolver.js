@@ -19,7 +19,7 @@ const MathSolver = () => {
       .get(url)
       .then(function (response) {
         // handle success
-        console.log("wolfram alpha api response:", response);
+        console.log("wolfram alpha api:", response);
         setApiState({ ...apiState, src: response });
       })
       .catch(function (error) {
