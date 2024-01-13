@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Input, Button } from "semantic-ui-react";
-const axios = require("axios").default;
+import { WolframClient } from 'node-wolfram-alpha';
+
+const client = new WolframClient('WU5ELG-E63YVEXY3U');
+
+
 
 const MathSolver = () => {
   const [apiState, setApiState] = useState({
@@ -9,26 +13,9 @@ const MathSolver = () => {
     src: "",
   });
 
-  const getAnswers = (query) => {
-    // ADD API KEY
-    const wolframApiKey = "WU5ELG-E63YVEXY3U"
-    const url = `https://api.wolframalpha.com/v1/simple?appid=${wolframApiKey}&i=${query}`;
-
-    // Make a request for a user with a given ID
-    axios
-      .get(url)
-      .then(function (response) {
-        // handle success
-        console.log("wolfram alpha api:", response);
-        setApiState({ ...apiState, src: response });
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .finally(function () {
-        // always executed
-      });
+  const getAnswers = async (query) => {
+    const result = await client.query(query, { podindex: 1 });
+    console.info("result", result)
   };
 
   const handleChange = (e) => {
