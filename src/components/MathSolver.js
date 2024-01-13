@@ -14,7 +14,7 @@ const MathSolver = () => {
     // ADD API KEY
     const {siteConfig} = useDocusaurusContext();
     const {wolframApiKey} = siteConfig;
-
+    console.info("wolframApiKey", wolframApiKey)
     const url = `https://api.wolframalpha.com/v1/simple?appid=${wolframApiKey}&i=${query}`;
 
     // Make a request for a user with a given ID
