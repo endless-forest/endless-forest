@@ -87,6 +87,10 @@ const config = {
         respectPrefersColorScheme: false,
       }
     }),
+    customFields: {
+      // Put your custom environment here
+      wolframApiKey: process.env.WOLF_API_KEY,
+    },
 };
 
 module.exports = config;
