@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 import { Input, Button } from "semantic-ui-react";
-import { WolframClient } from 'node-wolfram-alpha';
-
-const client = new WolframClient('WU5ELG-E63YVEXY3U');
-
-
 
 const MathSolver = () => {
   const [apiState, setApiState] = useState({
@@ -13,9 +8,8 @@ const MathSolver = () => {
     src: "",
   });
 
-  const getAnswers = async (query) => {
-    const result = await client.query(query, { podindex: 1 });
-    console.info("result", result)
+  const getAnswers = (query) => {
+    //
   };
 
   const handleChange = (e) => {
