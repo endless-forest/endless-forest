@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Input, Button } from "semantic-ui-react";
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 const axios = require("axios").default;
 
 const MathSolver = () => {
@@ -12,9 +11,7 @@ const MathSolver = () => {
 
   const getAnswers = (query) => {
     // ADD API KEY
-    const {siteConfig} = useDocusaurusContext();
-    const {wolframApiKey} = siteConfig;
-    console.info("wolframApiKey", wolframApiKey)
+    const wolframApiKey = "WU5ELG-E63YVEXY3U"
     const url = `https://api.wolframalpha.com/v1/simple?appid=${wolframApiKey}&i=${query}`;
 
     // Make a request for a user with a given ID
