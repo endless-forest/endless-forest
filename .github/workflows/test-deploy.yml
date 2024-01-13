@@ -21,6 +21,4 @@ jobs:
       - name: Install dependencies
         run: npm install --frozen-lockfile
       - name: Test build website
-        env:
-           WOLF_API_KEY: ${{ secrets.WOLF_API_KEY }}
         run: npm run build
