@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Input, Button } from "semantic-ui-react";
+
+const baseUrl = "https://afternoon-brook-38206-2e9ac60b70aa.herokuapp.com/math";
 
 const MathSolver = () => {
   const [apiState, setApiState] = useState({
@@ -8,8 +11,15 @@ const MathSolver = () => {
     src: "",
   });
 
-  const getAnswers = (query) => {
-    //
+  const getAnswers = async (query) => {
+    const fullUrl = `${baseUrl}?expression=${query}`;
+    let results;
+    try {
+      results = await axios.get(fullUrl);
+      setApiState({ ...apiState, src: results.data });
+    } catch (error) {
+      results = error;
+    }
   };
 
   const handleChange = (e) => {
