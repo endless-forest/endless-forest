@@ -15,8 +15,8 @@ const MathSolver = () => {
     const fullUrl = `${baseUrl}?expression=${query}`;
     let results;
     try {
-      results = await axios.get(fullUrl);
-      setApiState({ ...apiState, src: results.data });
+      results = await fetch(fullUrl);
+      setApiState({ ...apiState, src: results });
     } catch (error) {
       results = error;
     }
