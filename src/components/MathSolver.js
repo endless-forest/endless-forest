@@ -17,7 +17,7 @@ const MathSolver = () => {
     try {
       results = await axios.get(fullUrl);
       console.info("results", results)
-      setApiState({ ...apiState, src: results });
+      setApiState({ ...apiState, src: results.data });
     } catch (error) {
       results = error;
       console.info("error", error)
