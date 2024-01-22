@@ -15,10 +15,12 @@ const MathSolver = () => {
     const fullUrl = `${baseUrl}?expression=${query}`;
     let results;
     try {
-      results = await fetch(fullUrl);
+      results = await axios.get(fullUrl);
+      console.info("results", results)
       setApiState({ ...apiState, src: results });
     } catch (error) {
       results = error;
+      console.info("error", error)
     }
   };
 
