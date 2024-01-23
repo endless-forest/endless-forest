@@ -13,13 +13,12 @@ const MathSolver = () => {
 
   const getAnswers = async (query) => {
     const fullUrl = `${baseUrl}?expression=${query}`;
-    let results;
+    
     try {
-      results = await axios.get(fullUrl);
-      setApiState({ ...apiState, image: { exists: true, ...results.data } });
+      const results = await axios.get(fullUrl);
+      const data = results.data
+      setApiState({ ...apiState, image: { exists: true, ...data } });
     } catch (error) {
-      results = error;
-      console.info("error", error);
     }
   };
 
