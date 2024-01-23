@@ -12,7 +12,7 @@ const MathSolver = () => {
   });
 
   const getAnswers = async (query) => {
-    const fullUrl = `${baseUrl}?expression=${encodeURIComponent(query)}`;
+    const fullUrl = `${baseUrl}?expression=${encodeURIComponent(`solve ${query}`)}`;
     
     try {
       const results = await axios.get(fullUrl);
