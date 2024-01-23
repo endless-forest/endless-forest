@@ -8,7 +8,7 @@ const MathSolver = () => {
   const [apiState, setApiState] = useState({
     resultsDisplayed: false,
     query: "",
-    src: "",
+    image: { exists: false, src: "" },
   });
 
   const getAnswers = async (query) => {
@@ -16,11 +16,10 @@ const MathSolver = () => {
     let results;
     try {
       results = await axios.get(fullUrl);
-      console.info("results", results)
-      setApiState({ ...apiState, src: results.data });
+      setApiState({ ...apiState, image: { exists: true, ...results.data } });
     } catch (error) {
       results = error;
-      console.info("error", error)
+      console.info("error", error);
     }
   };
 
@@ -39,8 +38,16 @@ const MathSolver = () => {
       <Button basic color="teal" onClick={() => getAnswers(apiState.query)}>
         Solve
       </Button>
-
-      {apiState.src.length > 0 && <img src={apiState.src} />}
+      <br />
+      <div>
+        {apiState.image.exists && (
+          <img
+            src={apiState.image.src}
+            width={apiState.image.width}
+            height={apiState.image.height}
+          />
+        )}
+      </div>
     </main>
   );
 };
