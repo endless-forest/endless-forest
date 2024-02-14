@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from "axios";
-import { Input, Button, Message, MessageHeader} from "semantic-ui-react";
+import { Input, Button, Message, MessageHeader, Image} from "semantic-ui-react";
+import foxImage from '@site/static/img/fox.png';
 
 const testData = {
     "id": "chatcmpl-8s6zD5Enm4eNu7N1vRAIzAD5ZYkCZ",
@@ -64,8 +65,9 @@ const Story = () => {
         Write Story
       </Button>
 
-      {contentState.showContent && (<Message color="teal">
+      {contentState.showContent && (<Message color="teal" floating>
         <MessageHeader>Your Story</MessageHeader>
+        <Image src={foxImage} size='small' />
         {renderStory(response)}
         </Message>)}
 
