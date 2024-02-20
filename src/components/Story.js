@@ -6,9 +6,7 @@ import {
   Message,
   MessageHeader,
   Image,
-  Dimmer,
-  Loader,
-  Segment,
+  Loader
 } from "semantic-ui-react";
 import foxImage from "@site/static/img/fox.png";
 
@@ -38,7 +36,7 @@ const Story = () => {
 
   const renderStory = (story) => {
     const storyParagraphs = story.split("\n").map((str) => (
-      <p>
+      <p key={Math.random()}>
         <b>{str}</b>
       </p>
     ));
