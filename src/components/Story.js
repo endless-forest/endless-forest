@@ -48,14 +48,12 @@ const Story = () => {
     try {
       setContentState({ ...contentState, isLoading: true });
       const results = await axios.get(fullUrl, { mode: "cors" });
-      console.info("results.data", results.data);
       const storyResponse = results.data.story;
       setResponse(storyResponse);
-      setContentState({ ...contentState, showContent: true });
+      setContentState({ isLoading: false, showContent: true });
     } catch (error) {
-      console.error("error", error);
+      setContentState({...contentState, isLoading: false});
     }
-    setContentState({ ...contentState, isLoading: false });
   };
 
   return (
@@ -69,7 +67,7 @@ const Story = () => {
       <Button basic color="teal" onClick={() => getStory(prompt)}>
         Write Story
       </Button>
-
+      {contentState.isLoading && loader}
       {contentState.showContent && (
         <Message color="teal" floating>
           <MessageHeader>Your Story</MessageHeader>
@@ -77,7 +75,6 @@ const Story = () => {
           {renderStory(response)}
         </Message>
       )}
-      {contentState.isLoading && loader}
     </div>
   );
 };
