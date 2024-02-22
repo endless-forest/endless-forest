@@ -71,6 +71,7 @@ const Story = () => {
       {contentState.showContent && (
         <Message color="teal" floating>
           <MessageHeader>Your Story</MessageHeader>
+          <MessageHeader>Prompt: "{prompt}"</MessageHeader>
           <Image src={foxImage} size="small" />
           {renderStory(response)}
         </Message>
