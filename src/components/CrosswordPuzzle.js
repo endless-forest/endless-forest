@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import {Image} from "semantic-ui-react"
+import week2DefinitionsImage from "@site/static/img/week2-definitions.png";
 
 const week2Crossword = [
   2, 10, 21, 22, 23, 24, 25, 26, 27, 30, 42, 44, 50, 62, 64, 70, 75, 82, 84, 90,
@@ -35,6 +37,7 @@ const CrosswordPuzzle = () => {
   return (
     <div>
       <main>
+      <Image src={week2DefinitionsImage} size="large" />
         <table id="crossword-puzzle-table">
           <tr>
             <th></th>
